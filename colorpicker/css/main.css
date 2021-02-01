@@ -1,0 +1,27 @@
+#label {
+    font-size: 15pt;
+}
+
+#text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40pt;
+}
+
+.theme1Body {
+    background-color: #a83232;
+}
+
+.theme1Text {
+    color: #57cdcd;
+}
+
+.theme2Body {
+    background-color: #241cff;
+}
+
+.theme2Text {
+    color: #dbe300;
+}
