@@ -1,6 +1,3 @@
-let shoppingList = [];
-let instances;
-
 class Item {
     constructor(name, aisle, quantity) {
       this.name = name;
@@ -14,6 +11,20 @@ class Item {
       }
 }
 
+let shoppingList = [];
+let instances;
+
+db.collection('list').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        let item = new Item();
+        item.name = doc.data().name;
+        item.aisle = doc.data().aisle;
+        item.quantity = doc.data().quantity;
+        shoppingList.push(item);
+    });
+    displayShoppingList();
+});
+
 let onOpen = () => {
     let form = document.getElementById("item-form");
     form.reset();
@@ -22,13 +33,14 @@ let onOpen = () => {
 let onClose = () => {
     let item = new Item();
     item.name = document.getElementById('name').value;
-    item.lastname = document.getElementById('aisle').value;
+    item.aisle = document.getElementById('aisle').value;
     item.quantity = document.getElementById('quantity').value;
     item.addToList();
     console.log(item);
 }
 
 function displayShoppingList() {
+    console.log("eh");
     // Find the class roster unordered list
     let list = document.getElementById("shoppingList");
     // Clear out the existing list.
@@ -44,12 +56,12 @@ function displayShoppingList() {
         div.appendChild(h2);
 
         let p_aisle = document.createElement("p");
-        let aisle = document.createTextNode(item.aisle);
+        let aisle = document.createTextNode("Aisle: " + item.aisle);
         p_aisle.appendChild(aisle);
         div.appendChild(p_aisle);
 
         let p_quantity = document.createElement("p");
-        let quantity = document.createTextNode(item.quantity);
+        let quantity = document.createTextNode("Quantity: " + item.quantity);
         p_quantity.appendChild(quantity);
         div.appendChild(p_quantity);
 
