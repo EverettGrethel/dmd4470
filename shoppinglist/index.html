@@ -16,69 +16,75 @@
 </head>
 
 <body>
-    <div class="parentdiv">
-        <h1>Shopping List</h1>
-        <div id="shoppingList">
+  <div class="parentdiv">
+      <h1>Shopping List</h1>
+      <div id="archiveList">
 
-        </div>
-      <!-- Modal Trigger -->
-      <a class="waves-effect waves-light btn modal-trigger contrast" href="#item-modal">Add item</a>
-    </div>
-  <!-- Modal Structure -->
-  <div id="item-modal" class="modal bottom-sheet">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <form action="" id="item-form">
-        <div class="input-field">
-            <input type="text" id="name">
-            <label for="name">Item name</label>
-        </div>
-        <div class="input-field">
-            <input type="text" id="aisle">
-            <label for="aisle">Aisle #</label>
-        </div>
-        <div class="input-field">
-            <input type="text" id="quantity">
-            <label for="item">Quantity</label>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
-    </div>
+      </div>
+      <div id="shoppingList">
+
+      </div>
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger contrast" href="#item-modal">Add item</a>
   </div>
-  <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<!-- Modal Structure -->
+<div id="item-modal" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <form action="" id="item-form">
+      <div class="input-field">
+          <input type="text" id="name">
+          <label for="name">Item name</label>
+      </div>
+      <div class="input-field">
+          <input type="text" id="aisle">
+          <label for="aisle">Aisle #</label>
+      </div>
+      <div class="input-field">
+          <input type="text" id="quantity">
+          <label for="item">Quantity</label>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
+  </div>
+</div>
+<div id="archive-button">
+  <button class="feedback">See History</button>
+</div>
+<div id="move">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+   https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 
 <script>
-  // Check that service workers are supported
-  if ('serviceWorker' in navigator) {
-    // Use the window load event to keep the page load performant
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/dmd4470/shoppinglist/service-worker.js');
-    }); 
-  }
+// Check that service workers are supported
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('dmd4470/shoppinglist/service-worker.js');
+  }); 
+}
 </script>
 
 <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCKC0AH53UKrRQ37Vvgv4CX_OTurs7Qmt8",
-    authDomain: "shoppinglist-34a1d.firebaseapp.com",
-    projectId: "shoppinglist-34a1d",
-    storageBucket: "shoppinglist-34a1d.appspot.com",
-    messagingSenderId: "602808715323",
-    appId: "1:602808715323:web:0ed2b6b3dfa5cee097b41e"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCKC0AH53UKrRQ37Vvgv4CX_OTurs7Qmt8",
+  authDomain: "shoppinglist-34a1d.firebaseapp.com",
+  projectId: "shoppinglist-34a1d",
+  storageBucket: "shoppinglist-34a1d.appspot.com",
+  messagingSenderId: "602808715323",
+  appId: "1:602808715323:web:0ed2b6b3dfa5cee097b41e"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 </script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
