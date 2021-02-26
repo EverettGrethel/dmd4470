@@ -38,10 +38,10 @@ function displayShoppingList() {
         let div = document.createElement("div");
         div.classList.add("item");
 
-        let h1 = document.createElement("h1");
+        let h2 = document.createElement("h2");
         let name = document.createTextNode(item.name);
-        h1.appendChild(name)
-        div.appendChild(h1);
+        h2.appendChild(name)
+        div.appendChild(h2);
 
         let p_aisle = document.createElement("p");
         let aisle = document.createTextNode(item.aisle);
@@ -56,8 +56,11 @@ function displayShoppingList() {
         let button = document.createElement("button");
         button.innerHTML = "Delete";
         button.addEventListener('click', () => {
-            let index = shoppingList.indexOf()
-        })
+            let removeIndex = shoppingList.map(function(x) { return x.id; }).indexOf(item.name);
+            shoppingList.splice(removeIndex, 1);
+            displayShoppingList();
+            console.log("hello");
+        });
         div.appendChild(button);
 
         list.appendChild(div);

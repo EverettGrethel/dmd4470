@@ -5,6 +5,14 @@ body {
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    margin-bottom: 30px;
+    color: #1c51a6;
+    font-size: 35pt;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     margin-bottom: 10px;
     color: #1c51a6;
     margin: 0;
@@ -21,6 +29,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .item {
