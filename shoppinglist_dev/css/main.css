@@ -1,0 +1,92 @@
+body {
+    background: #e2e1e0;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #1c51a6;
+    font-size: 35pt;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #1c51a6;
+    margin: 0;
+    font-size: 27pt;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.parentdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    background: #fff;
+    border-radius: 2px;
+    margin: 1rem;
+    position: relative;
+    width: 200px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 20px;
+}
+
+.item_archived {
+    background: rgb(155, 155, 155);
+    border-radius: 2px;
+    margin: 1rem;
+    position: relative;
+    width: 200px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 20px;
+}
+
+.contrast {
+    font-size: 18pt;
+    color: black;
+}
+
+#shoppingList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outer_div {
+    display: flex;
+}
+
+.feedback {
+    background-color : #26A69A;
+    color: black;
+    font-size: 16pt;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-color: #26A69A;
+  }
+  
+  #archive-button {
+    position: fixed;
+    bottom: -4px;
+    right: 10px;
+    margin: 0 10px 20px 0;
+  }
+
+  #move {
+    position: fixed;
+    bottom: -4px;
+    left: 10px;
+    margin: 10px;
+  }
