@@ -3,12 +3,12 @@
     "name": "Shopping List: for your shopping needs",
     "icons": [
       {
-        "src": "dmd4470/shoppinglist/img/page-icon-192.png",
+        "src": "/dmd4470/shoppinglist/img/page-icon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "dmd4470/shoppinglist/img/page-icon-512.png",
+        "src": "/dmd4470/shoppinglist/img/page-icon-512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
@@ -21,12 +21,12 @@
     "description": "Keep track of your shopping needs",
     "screenshots": [
       {
-        "src": "dmd4470/shoppinglist/img/screenshot1.png",
+        "src": "/dmd4470/shoppinglist/img/screenshot1.png",
         "type": "image/png",
         "sizes": "540x311"
       },
       {
-        "src": "dmd4470/shoppinglist/img/screenshot2.png",
+        "src": "/dmd4470/shoppinglist/img/screenshot2.png",
         "type": "image/png",
         "sizes": "540x311"
       }
