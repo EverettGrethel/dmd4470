@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="parentdiv">
+        <div id="shoppingList">
+
+        </div>
+      <!-- Modal Trigger -->
+      <a class="waves-effect waves-light btn modal-trigger" href="#item-modal">Modal</a>
+    </div>
+  <!-- Modal Structure -->
+  <div id="item-modal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <form action="" id="item-form">
+        <div class="input-field">
+            <input type="text" id="name">
+            <label for="name">Item name</label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="aisle">
+            <label for="aisle">Aisle #</label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="quantity">
+            <label for="item">Quantity</label>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
+    </div>
+  </div>
+
+
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
