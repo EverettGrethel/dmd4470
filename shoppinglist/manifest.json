@@ -13,7 +13,7 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/index.html",
+    "start_url": "/",
     "background_color": "#e2e1e0",
     "display": "standalone",
     "scope": "/",
@@ -26,8 +26,8 @@
         "sizes": "540x311"
       },
       {
-        "src": "/img/screenshot2.jpg",
-        "type": "image/jpg",
+        "src": "/img/screenshot2.png",
+        "type": "image/png",
         "sizes": "540x311"
       }
     ]
