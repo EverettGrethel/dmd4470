@@ -1,0 +1,34 @@
+{
+    "short_name": "Shopping List",
+    "name": "Shopping List: for your shopping needs",
+    "icons": [
+      {
+        "src": "/img/page-icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/img/page-icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#e2e1e0",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#4285f4",
+    "description": "Keep track of your shopping needs",
+    "screenshots": [
+      {
+        "src": "/img/screenshot1.png",
+        "type": "image/png",
+        "sizes": "540x311"
+      },
+      {
+        "src": "/img/screenshot2.jpg",
+        "type": "image/jpg",
+        "sizes": "540x311"
+      }
+    ]
+  }

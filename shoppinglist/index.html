@@ -1,16 +1,18 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+    <title>Shopping List</title>
+    <meta name="theme-color" content="#4285f4">
+    <meta name="description" content="Shopping list app for Joel's shopping needs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-    
+    <link rel="apple-touch-icon" href="img/page-icon-192.png">
+    <link rel="manifest" href="/manifest.json">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="css/main.css">
+    <script src="service-worker.js"></script>
 </head>
 
 <body>
@@ -20,7 +22,7 @@
 
         </div>
       <!-- Modal Trigger -->
-      <a class="waves-effect waves-light btn modal-trigger" href="#item-modal">Add item</a>
+      <a class="waves-effect waves-light btn modal-trigger contrast" href="#item-modal">Add item</a>
     </div>
   <!-- Modal Structure -->
   <div id="item-modal" class="modal bottom-sheet">
@@ -45,12 +47,22 @@
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
     </div>
   </div>
-
+  <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+<script>
+  // Check that service workers are supported
+  if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+</script>
 
 <script>
   // Your web app's Firebase configuration

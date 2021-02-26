@@ -42,6 +42,11 @@ p {
     padding: 20px;
 }
 
+.contrast {
+    font-size: 18pt;
+    color: black;
+}
+
 #shoppingList {
     display: flex;
     flex-direction: column;
