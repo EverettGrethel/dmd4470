@@ -5,7 +5,8 @@
       {
         "src": "/dmd4470/shoppinglist/img/page-icon-192.png",
         "type": "image/png",
-        "sizes": "192x192"
+        "sizes": "192x192",
+        "purpose": "any maskable"
       },
       {
         "src": "/dmd4470/shoppinglist/img/page-icon-512.png",
@@ -13,7 +14,7 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/",
+    "start_url": "/dmd4470/shoppinglist/",
     "background_color": "#e2e1e0",
     "display": "standalone",
     "scope": "/",
