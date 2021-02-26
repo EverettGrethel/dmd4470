@@ -12,7 +12,7 @@
     <link rel="manifest" href="manifest.json">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="css/main.css">
-    <script src="dmd4470/shoppinglist/service-worker.js"></script>
+    <script src="/dmd4470/shoppinglist/service-worker.js"></script>
 </head>
 
 <body>
@@ -59,7 +59,7 @@
   if ('serviceWorker' in navigator) {
     // Use the window load event to keep the page load performant
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('dmd4470/shoppinglist/service-worker.js');
+      navigator.serviceWorker.register('/service-worker.js');
     }); 
   }
 </script>
