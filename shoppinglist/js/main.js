@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 //This function checks whether another user has made any changes and updates locally
-function checkDatabase() {
+/*function checkDatabase() {
     db.collection('list').get().then((snapshot) => {
         shoppingList = [];
         snapshot.docs.forEach((doc, i) => {
@@ -131,4 +131,4 @@ function checkDatabase() {
     });
 }
 
-window.setInterval(checkDatabase, 1000);
+window.setInterval(checkDatabase, 1000);*/
