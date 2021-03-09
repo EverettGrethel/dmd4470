@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="todolist">
+        <h1>Todo List</h1>
+        <todoform 
+            v-on:add-item="addItem"
+        >
+        </todoform>
+        <ul>
+            <li
+                is="todoitem"
+                v-for="(item, index) in items"
+                v-bind:key="item.id"
+                v-bind:item="item"
+                v-bind:index="index"
+                v-on:toggle-edit-on="toggleEdit"
+                v-on:complete-item="completeItem"
+            ></li>
+        </ul>
+        <editform
+            v-if="visible"
+            v-bind:item="items[indexToEdit]"
+            v-bind:index="indexToEdit"
+            v-on:edit-item="editItem"
+        ></editform>
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC45KVqIRk7oT3YCMg0G-q4xlGbB5qH_pw",
+        authDomain: "vuetodolist-35d6e.firebaseapp.com",
+        projectId: "vuetodolist-35d6e",
+        storageBucket: "vuetodolist-35d6e.appspot.com",
+        messagingSenderId: "37891695724",
+        appId: "1:37891695724:web:657fa92d8f9b818f876449"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
